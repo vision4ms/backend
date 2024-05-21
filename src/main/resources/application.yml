@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: vision4ms
+  data:
+    mongodb:
+      username: ${MONGO_USR:vision}
+      password: ${MONGO_PWD:vision}
+      database: vision
+      host: localhost
+      port: 27017
+      authentication-database: admin
