@@ -39,7 +39,9 @@ public class DefaultProductServiceImpl implements ProductService {
             depend.setCreatedAt(today);
             depend.setUpdatedAt(today);
 
-            productRepository.save(depend);
+            var newProduct = productRepository.save(depend);
+
+            depends.add(newProduct);
         }
 
         return productRepository.insert(adapt(product, depends));
